@@ -242,10 +242,8 @@
   #define WITH_TMC 1
   #define WITH_BIQUH2 1
   #define XY2_MODELS 1
-  //#define X_BED_SIZE 255
-  #define X_BED_SIZE 245
-  //#define Y_BED_SIZE 255
-  #define Y_BED_SIZE 245
+  #define X_BED_SIZE 255
+  #define Y_BED_SIZE 255
   #define Z_MAX_POS 350
   #define CUSTOM_MACHINE_NAME "Tronxy XY-2PRO M"
   // My config optimisation
