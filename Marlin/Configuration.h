@@ -1324,7 +1324,7 @@
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
 #if WITH_TMC && WITH_BIQUH2
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 1864 } // 932 if not TMC
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 1888 } // 932 if not TMC
 #elif WITH_TMC && WITH_BMG
   #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 830 }
 #elif WITH_TMC && WITH_TITAN
