@@ -245,7 +245,7 @@
   #define X_BED_SIZE 255
   #define Y_BED_SIZE 255
   #define Z_MAX_POS 350
-  #define CUSTOM_MACHINE_NAME "Tronxy XY-2PRO M"
+  #define CUSTOM_MACHINE_NAME "Tronxy XY-2 H2"
   // My config optimisation
   #define CUSTOM_SETTINGS 1
 
