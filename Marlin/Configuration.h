@@ -21,6 +21,339 @@
  */
 #pragma once
 
+//JUST uncomment the option for your machine
+// #define V6_330_TITAN_TMC 1
+// #define V6_330_TITAN_NO_TMC 1
+// #define V6_330_NO_TITAN_TMC 1
+// #define V6_330_NO_TITAN_NO_TMC 1
+// #define V6_400_TITAN_TMC 1
+// #define V6_400_NO_TITAN_TMC 1
+// #define V6_500_TITAN_TMC 1
+
+// #define V5_330_TITAN_TMC 1
+// #define V5_330_TITAN_NO_TMC 1
+// #define V5_330_NO_TITAN_TMC 1
+// #define V5_330_NO_TITAN_NO_TMC 1
+
+// #define XY3_V5_310_NO_TITAN_NO_TMC_NO_ABL 1
+// #define XY3_V5_330_NO_TITAN_TMC_NO_ABL 1
+
+// #define D01_V8_220_TITAN_TMC_NO_ABL 1
+
+// XY2 Thanks to Emmanuel Hayez!
+// #define XY2_V6_255_NO_TITAN_TMC 1
+// #define XY2_V6_255_TITAN_TMC 1
+// #define XY2_V6_255_BMG_TMC 1
+#define XY2_V6_255M_H2_TMC 1
+
+// #define XY2_V5_255_NO_TITAN_TMC 1
+// #define XY2_V5_255_TITAN_TMC 1
+// #define XY2_V5_255_TITAN_NO_TMC 1
+// #define XY2_V5_255_NO_TITAN_NO_TMC 1
+// #define XY2_V5_220_NO_TITAN_TMC 1
+// #define XY2_V5_220_TITAN_TMC 1
+// #define XY2_V5_220_NO_TITAN_NO_TMC 1
+// #define XY2_V5_220_TITAN_NO_TMC 1
+
+// #define BTT_SKR_TURBO_330_NO_TITAN_TMC_2209_UART 1
+
+// #define TFT_LVGL_UI
+// #define TFT_CLASSIC_UI
+#define TFT_COLOR_UI
+
+#if V6_330_TITAN_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V6
+  #define WITH_TMC 1
+  #define WITH_TITAN 1
+  #define X_BED_SIZE 330
+  #define Y_BED_SIZE 330
+  #define Z_MAX_POS 400
+  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6 330 Titan TMC"
+  #define COREXY
+
+#elif V6_330_TITAN_NO_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V6
+  //#define WITH_TMC 1
+  #define WITH_TITAN 1
+  #define X_BED_SIZE 330
+  #define Y_BED_SIZE 330
+  #define Z_MAX_POS 400
+  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6 330 Titan"
+  #define COREXY
+
+#elif V6_330_NO_TITAN_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V6
+  #define WITH_TMC 1
+  //#define WITH_TITAN 1
+  #define X_BED_SIZE 330
+  #define Y_BED_SIZE 330
+  #define Z_MAX_POS 400
+  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6 330 TMC"
+  #define COREXY
+
+#elif V6_330_NO_TITAN_NO_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V6
+  //#define WITH_TMC 1
+  //#define WITH_TITAN 1
+  #define X_BED_SIZE 330
+  #define Y_BED_SIZE 330
+  #define Z_MAX_POS 400
+  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6"
+  #define COREXY
+
+#elif V6_400_TITAN_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V6
+  #define WITH_TMC 1
+  #define WITH_TITAN 1
+  #define X_BED_SIZE 400
+  #define Y_BED_SIZE 400
+  #define Z_MAX_POS 400
+  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6 400 Titan TMC"
+  #define COREXY
+
+#elif V6_400_NO_TITAN_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V6
+  #define WITH_TMC 1
+  //#define WITH_TITAN 1
+  #define X_BED_SIZE 400
+  #define Y_BED_SIZE 400
+  #define Z_MAX_POS 400
+  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6 400 TMC"
+  #define COREXY
+
+#elif V6_500_TITAN_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V6
+  #define WITH_TMC 1
+  #define WITH_TITAN 1
+  #define X_BED_SIZE 500
+  #define Y_BED_SIZE 500
+  #define Z_MAX_POS 500
+  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6 500 Titan TMC"
+  #define COREXY
+
+#elif V5_330_TITAN_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V5
+  #define WITH_TMC 1
+  #define WITH_TITAN 1
+  #define X_BED_SIZE 330
+  #define Y_BED_SIZE 330
+  #define Z_MAX_POS 400
+  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V5 330 Titan TMC"
+  #define COREXY
+
+#elif V5_330_TITAN_NO_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V5
+  //#define WITH_TMC 1
+  #define WITH_TITAN 1
+  #define X_BED_SIZE 330
+  #define Y_BED_SIZE 330
+  #define Z_MAX_POS 400
+  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V5 330 Titan"
+  #define COREXY
+
+#elif V5_330_NO_TITAN_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V5
+  #define WITH_TMC 1
+  //#define WITH_TITAN 1
+  #define X_BED_SIZE 330
+  #define Y_BED_SIZE 330
+  #define Z_MAX_POS 400
+  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V5 330 TMC"
+  #define COREXY
+
+#elif V5_330_NO_TITAN_NO_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V5
+  //#define WITH_TMC 1
+  //#define WITH_TITAN 1
+  #define X_BED_SIZE 330
+  #define Y_BED_SIZE 330
+  #define Z_MAX_POS 400
+  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V5 330"
+  #define COREXY
+
+#elif D01_V8_220_TITAN_TMC_NO_ABL
+  // The V8-190729 is similar to the V5
+  #define MOTHERBOARD BOARD_CHITU3D_V5
+  #define WITH_TMC 1
+  #define WITH_TITAN 1
+  #define D01_MODELS 1
+  #define WITHOUT_ABL 1
+  #define X_BED_SIZE 220
+  #define Y_BED_SIZE 220
+  #define Z_MAX_POS 220
+
+  #define CUSTOM_MACHINE_NAME "Tronxy D01 220"
+  #define COREXY
+
+#elif XY3_V5_330_NO_TITAN_TMC_NO_ABL
+  #define MOTHERBOARD BOARD_CHITU3D_V5
+  #define WITH_TMC 1
+  //#define WITH_TITAN 1
+  #define WITHOUT_ABL 1
+  #define XY3_MODELS 1
+  #define X_BED_SIZE 300
+  #define Y_BED_SIZE 300
+  #define Z_MAX_POS 330
+  #define CUSTOM_MACHINE_NAME "Tronxy XY3 300"
+
+#elif XY3_V5_310_NO_TITAN_NO_TMC_NO_ABL
+  #define MOTHERBOARD BOARD_CHITU3D_V5
+  //#define WITH_TMC 1
+  //#define WITH_TITAN 1
+  #define WITHOUT_ABL 1
+  #define XY3_MODELS 1
+  #define X_BED_SIZE 310
+  #define Y_BED_SIZE 310
+  #define Z_MAX_POS 400
+  #define CUSTOM_MACHINE_NAME "Tronxy XY3 310"
+
+#elif XY2_V6_255_NO_TITAN_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V6
+  #define WITH_TMC 1
+  //#define WITH_TITAN 1
+  #define XY2_MODELS 1
+  #define X_BED_SIZE 255
+  #define Y_BED_SIZE 255
+  #define Z_MAX_POS 260
+  #define CUSTOM_MACHINE_NAME "Tronxy XY-2PRO"
+
+#elif XY2_V6_255_TITAN_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V6
+  #define WITH_TMC 1
+  #define WITH_TITAN 1
+  #define XY2_MODELS 1
+  #define X_BED_SIZE 255
+  #define Y_BED_SIZE 255
+  #define Z_MAX_POS 245 // Due to the height of the titan extruder it's recommended to reduce the max Z
+  #define CUSTOM_MACHINE_NAME "Tronxy XY-2PRO"
+
+#elif XY2_V6_255_BMG_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V6
+  #define WITH_TMC 1
+  #define WITH_BMG 1
+  #define XY2_MODELS 1
+  #define X_BED_SIZE 255
+  #define Y_BED_SIZE 255
+  #define Z_MAX_POS 260
+  #define CUSTOM_MACHINE_NAME "Tronxy XY-2PRO"
+
+#elif XY2_V6_255M_H2_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V6
+  #define WITH_TMC 1
+  #define WITH_BIQUH2 1
+  #define XY2_MODELS 1
+  #define X_BED_SIZE 255
+  #define Y_BED_SIZE 255
+  #define Z_MAX_POS 350
+  #define CUSTOM_MACHINE_NAME "Tronxy XY-2 H2"
+  // My config optimisation
+  #define CUSTOM_SETTINGS 1
+
+  #define G26_MESH_VALIDATION
+  #define S_CURVE_ACCELERATION
+
+  #define DEFAULT_Kp 14.06
+  #define DEFAULT_Ki 0.88
+  #define DEFAULT_Kd 55.98
+
+#elif XY2_V5_255_NO_TITAN_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V5
+  #define WITH_TMC 1
+  //#define WITH_TITAN 1
+  #define XY2_MODELS 1
+  #define X_BED_SIZE 255
+  #define Y_BED_SIZE 255
+  #define Z_MAX_POS 260
+  #define CUSTOM_MACHINE_NAME "Tronxy XY-2PRO"
+
+#elif XY2_V5_255_TITAN_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V5
+  #define WITH_TMC 1
+  #define WITH_TITAN 1
+  #define XY2_MODELS 1
+  #define X_BED_SIZE 255
+  #define Y_BED_SIZE 255
+  #define Z_MAX_POS 245 // Due to the height of the titan extruder it's recommended to reduce the max Z
+  #define CUSTOM_MACHINE_NAME "Tronxy XY-2PRO"
+
+#elif XY2_V5_255_TITAN_NO_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V5
+  #define WITH_TMC 0
+  #define WITH_TITAN 1
+  #define XY2_MODELS 1
+  #define T2_LEADSCREW 1
+  #define X_BED_SIZE 255
+  #define Y_BED_SIZE 255
+  #define Z_MAX_POS 245 // Due to the height of the titan extruder it's recommended to reduce the max Z
+  #define CUSTOM_MACHINE_NAME "Tronxy XY-2PRO"
+
+#elif XY2_V5_255_NO_TITAN_NO_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V5
+  //#define WITH_TMC 1
+  //#define WITH_TITAN 1
+  #define XY2_MODELS 1
+  #define X_BED_SIZE 255
+  #define Y_BED_SIZE 255
+  #define Z_MAX_POS 260
+  #define CUSTOM_MACHINE_NAME "Tronxy XY-2PRO"
+
+#elif XY2_V5_220_NO_TITAN_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V5
+  #define WITH_TMC 1
+  //#define WITH_TITAN 1
+  #define XY2_MODELS 1
+  #define X_BED_SIZE 220
+  #define Y_BED_SIZE 220
+  #define Z_MAX_POS 260
+  #define CUSTOM_MACHINE_NAME "Tronxy XY-2"
+
+#elif XY2_V5_220_TITAN_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V5
+  #define WITH_TMC 1
+  #define WITH_TITAN 1
+  #define XY2_MODELS 1
+  #define X_BED_SIZE 220
+  #define Y_BED_SIZE 220
+  #define Z_MAX_POS 245 // Due to the height of the titan extruder it's recommended to reduce the max Z
+  #define CUSTOM_MACHINE_NAME "Tronxy XY-2"
+
+#elif XY2_V5_220_NO_TITAN_NO_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V5
+  //#define WITH_TMC 1
+  //#define WITH_TITAN 1
+  #define XY2_MODELS 1
+  #define T2_LEADSCREW 1
+  #define X_BED_SIZE 220
+  #define Y_BED_SIZE 220
+  #define Z_MAX_POS 260
+  #define CUSTOM_MACHINE_NAME "Tronxy XY-2"
+
+#elif XY2_V5_220_TITAN_NO_TMC
+  #define MOTHERBOARD BOARD_CHITU3D_V5
+  //#define WITH_TMC 1
+  #define WITH_TITAN 1
+  #define XY2_MODELS 1
+  #define T2_LEADSCREW 1
+  #define X_BED_SIZE 220
+  #define Y_BED_SIZE 220
+  #define Z_MAX_POS 245 // Due to the height of the titan extruder it's recommended to reduce the max Z
+  #define CUSTOM_MACHINE_NAME "Tronxy XY-2"
+
+#elif BTT_SKR_TURBO_330_NO_TITAN_TMC_2209_UART
+  // You need to set `default_env = LPC1769` in platformio.ini
+  #define MOTHERBOARD BOARD_BTT_SKR_V1_4_TURBO
+  #define WITH_TMC_2209_UART 1
+  //#define WITH_TMC 1
+  //#define WITH_TITAN 1
+  #define X_BED_SIZE 330
+  #define Y_BED_SIZE 330
+  #define Z_MAX_POS 400
+  #define CUSTOM_MACHINE_NAME "Tronxy X5SA SKR Turbo"
+  #define COREXY
+  #define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+
+#endif
+
 /**
  * Configuration.h
  *
@@ -90,9 +423,16 @@
 //#define SHOW_CUSTOM_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Statusscreen.h on the status screen.
-//#define CUSTOM_STATUS_SCREEN_IMAGE
+#ifdef TFT_CLASSIC_UI
+  #define CUSTOM_STATUS_SCREEN_IMAGE
+#endif
 
 // @section machine
+
+// Choose the name from boards.h that matches your setup
+#ifndef MOTHERBOARD
+  #define MOTHERBOARD BOARD_RAMPS_14_EFB
+#endif
 
 /**
  * Select the serial port on the board to use for communication with the host.
@@ -102,7 +442,11 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT 0
+#if MOTHERBOARD == BOARD_BTT_SKR_V1_4_TURBO
+  #define SERIAL_PORT -1
+#else
+  #define SERIAL_PORT 1
+#endif
 
 /**
  * Serial Port Baud Rate
@@ -115,7 +459,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 250000
+#define BAUDRATE 115200
 //#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate
 
 /**
@@ -123,7 +467,11 @@
  * Currently Ethernet (-2) is only supported on Teensy 4.1 boards.
  * :[-2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-//#define SERIAL_PORT_2 -1
+#if MOTHERBOARD == BOARD_BTT_SKR_V1_4_TURBO
+  #define SERIAL_PORT_2 0
+#else
+  #define SERIAL_PORT_2 3
+#endif
 //#define BAUDRATE_2 250000   // Enable to override BAUDRATE
 
 /**
@@ -139,7 +487,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_RAMPS_14_EFB
+  #define MOTHERBOARD BOARD_CHITU3D_V6
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
@@ -163,7 +511,7 @@
  *
  * :[3, 4, 5, 6]
  */
-//#define LINEAR_AXES 3
+#define LINEAR_AXES 3
 
 /**
  * Axis codes for additional axes:
@@ -371,8 +719,12 @@
   //#define PS_OFF_SOUND            // Beep 1s when power off
   #define PSU_ACTIVE_STATE LOW      // Set 'LOW' for ATX, 'HIGH' for X-Box
 
-  //#define PSU_DEFAULT_OFF         // Keep power off until enabled directly with M80
-  //#define PSU_POWERUP_DELAY 250   // (ms) Delay for the PSU to warm up to full power
+  //#define PSU_DEFAULT_OFF               // Keep power off until enabled directly with M80
+  //#define PSU_POWERUP_DELAY      250    // (ms) Delay for the PSU to warm up to full power
+  //#define LED_POWEROFF_TIMEOUT 10000    // (ms) Turn off LEDs after power-off, with this amount of delay
+
+  //#define POWER_OFF_TIMER               // Enable M81 D<seconds> to power off after a delay
+  //#define POWER_OFF_WAIT_FOR_COOLDOWN   // Enable M81 S to power off only after cooldown
 
   //#define PSU_POWERUP_GCODE  "M355 S1"  // G-code to run after power-on (e.g., case light on)
   //#define PSU_POWEROFF_GCODE "M355 S0"  // G-code to run before power-off (e.g., case light off)
@@ -384,11 +736,13 @@
     #define AUTO_POWER_CONTROLLERFAN
     #define AUTO_POWER_CHAMBER_FAN
     #define AUTO_POWER_COOLER_FAN
-    //#define AUTO_POWER_E_TEMP        50 // (°C) Turn on PSU if any extruder is over this temperature
-    //#define AUTO_POWER_CHAMBER_TEMP  30 // (°C) Turn on PSU if the chamber is over this temperature
-    //#define AUTO_POWER_COOLER_TEMP   26 // (°C) Turn on PSU if the cooler is over this temperature
     #define POWER_TIMEOUT              30 // (s) Turn off power if the machine is idle for this duration
     //#define POWER_OFF_DELAY          60 // (s) Delay of poweroff after M81 command. Useful to let fans run for extra time.
+  #endif
+  #if EITHER(AUTO_POWER_CONTROL, POWER_OFF_WAIT_FOR_COOLDOWN)
+    //#define AUTO_POWER_E_TEMP        50 // (°C) PSU on if any extruder is over this temperature
+    //#define AUTO_POWER_CHAMBER_TEMP  30 // (°C) PSU on if the chamber is over this temperature
+    //#define AUTO_POWER_COOLER_TEMP   26 // (°C) PSU on if the cooler is over this temperature
   #endif
 #endif
 
@@ -431,6 +785,9 @@
  *     5 : 100kΩ  ATC Semitec 104GT-2/104NT-4-R025H42G - Used in ParCan, J-Head, and E3D, SliceEngineering 300°C
  *   501 : 100kΩ  Zonestar - Tronxy X3A
  *   502 : 100kΩ  Zonestar - used by hot bed in Zonestar Průša P802M
+ *   503 : 100kΩ  Zonestar (Z8XM2) Heated Bed thermistor
+ *   504 : 100kΩ  Zonestar P802QR2 (Part# QWG-104F-B3950) Hotend Thermistor
+ *   505 : 100kΩ  Zonestar P802QR2 (Part# QWG-104F-3950) Bed Thermistor
  *   512 : 100kΩ  RPW-Ultra hotend
  *     6 : 100kΩ  EPCOS - Not as accurate as table #1 (created using a fluke thermocouple)
  *     7 : 100kΩ  Honeywell 135-104LAG-J01
@@ -486,7 +843,11 @@
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  *
  */
-#define TEMP_SENSOR_0 1
+#if defined(WITH_BIQUH2)
+  #define TEMP_SENSOR_0 5
+#else
+  #define TEMP_SENSOR_0 1
+#endif
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -494,7 +855,7 @@
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_6 0
 #define TEMP_SENSOR_7 0
-#define TEMP_SENSOR_BED 0
+#define TEMP_SENSOR_BED 1
 #define TEMP_SENSOR_PROBE 0
 #define TEMP_SENSOR_CHAMBER 0
 #define TEMP_SENSOR_COOLER 0
@@ -600,9 +961,12 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  22.20
-    #define DEFAULT_Ki   1.08
-    #define DEFAULT_Kd 114.00
+    // If we did not set specific parameters for Tronxy then we use one of the default one
+    #ifndef DEFAULT_Kp
+      #define DEFAULT_Kp  22.20
+      #define DEFAULT_Ki   1.08
+      #define DEFAULT_Kd 114.00
+    #endif
   #endif
 #endif // PIDTEMP
 
@@ -756,6 +1120,7 @@
 //#define COREZX
 //#define COREZY
 //#define MARKFORGED_XY  // MarkForged. See https://reprap.org/forum/read.php?152,504042
+//#define MARKFORGED_YX
 
 // Enable for a belt style printer with endless "Z" motion
 //#define BELTPRINTER
@@ -790,7 +1155,7 @@
 //#define USE_KMAX_PLUG
 
 // Enable pullup for all endstops to prevent a floating state
-#define ENDSTOPPULLUPS
+//#define ENDSTOPPULLUPS
 #if DISABLED(ENDSTOPPULLUPS)
   // Disable ENDSTOPPULLUPS to set pullups individually
   //#define ENDSTOPPULLUP_XMIN
@@ -828,9 +1193,9 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+#define X_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
+#define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
 #define I_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define J_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define K_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -840,7 +1205,7 @@
 #define I_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define J_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define K_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MIN_PROBE_ENDSTOP_INVERTING false // Set to true to invert the logic of the probe.
+#define Z_MIN_PROBE_ENDSTOP_INVERTING true // Set to true to invert the logic of the probe.
 
 /**
  * Stepper Drivers
@@ -860,25 +1225,61 @@
  *          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
  * :['A4988', 'A5984', 'DRV8825', 'LV8729', 'L6470', 'L6474', 'POWERSTEP01', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2160', 'TMC2160_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC2209', 'TMC2209_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE', 'TMC5160', 'TMC5160_STANDALONE']
  */
-#define X_DRIVER_TYPE  A4988
-#define Y_DRIVER_TYPE  A4988
-#define Z_DRIVER_TYPE  A4988
-//#define X2_DRIVER_TYPE A4988
-//#define Y2_DRIVER_TYPE A4988
-//#define Z2_DRIVER_TYPE A4988
-//#define Z3_DRIVER_TYPE A4988
-//#define Z4_DRIVER_TYPE A4988
+#ifdef WITH_TMC
+  #define X_DRIVER_TYPE TMC2208_STANDALONE
+  #define Y_DRIVER_TYPE TMC2208_STANDALONE
+  #define Z_DRIVER_TYPE TMC2208_STANDALONE
+  //#define X2_DRIVER_TYPE A4988
+  //#define Y2_DRIVER_TYPE A4988
+  //#define Z2_DRIVER_TYPE A4988
+  //#define Z3_DRIVER_TYPE A4988
+  //#define Z4_DRIVER_TYPE A4988
+  #define E0_DRIVER_TYPE TMC2208_STANDALONE
+  //#define E1_DRIVER_TYPE A4988
+  //#define E2_DRIVER_TYPE A4988
+  //#define E3_DRIVER_TYPE A4988
+  //#define E4_DRIVER_TYPE A4988
+  //#define E5_DRIVER_TYPE A4988
+  //#define E6_DRIVER_TYPE A4988
+  //#define E7_DRIVER_TYPE A4988
+#elif WITH_TMC_2209_UART
+  #define X_DRIVER_TYPE TMC2209
+  #define Y_DRIVER_TYPE TMC2209
+  #define Z_DRIVER_TYPE TMC2209
+  //#define X2_DRIVER_TYPE A4988
+  //#define Y2_DRIVER_TYPE A4988
+  //#define Z2_DRIVER_TYPE A4988
+  //#define Z3_DRIVER_TYPE A4988
+  //#define Z4_DRIVER_TYPE A4988
+  #define E0_DRIVER_TYPE TMC2209
+  #define E1_DRIVER_TYPE TMC2209
+  //#define E2_DRIVER_TYPE A4988
+  //#define E3_DRIVER_TYPE A4988
+  //#define E4_DRIVER_TYPE A4988
+  //#define E5_DRIVER_TYPE A4988
+  //#define E6_DRIVER_TYPE A4988
+  //#define E7_DRIVER_TYPE A4988
+#else
+  #define X_DRIVER_TYPE  A4988
+  #define Y_DRIVER_TYPE  A4988
+  #define Z_DRIVER_TYPE  A4988
+  //#define X2_DRIVER_TYPE A4988
+  //#define Y2_DRIVER_TYPE A4988
+  //#define Z2_DRIVER_TYPE A4988
+  //#define Z3_DRIVER_TYPE A4988
+  //#define Z4_DRIVER_TYPE A4988
 //#define I_DRIVER_TYPE  A4988
 //#define J_DRIVER_TYPE  A4988
 //#define K_DRIVER_TYPE  A4988
-#define E0_DRIVER_TYPE A4988
-//#define E1_DRIVER_TYPE A4988
-//#define E2_DRIVER_TYPE A4988
-//#define E3_DRIVER_TYPE A4988
-//#define E4_DRIVER_TYPE A4988
-//#define E5_DRIVER_TYPE A4988
-//#define E6_DRIVER_TYPE A4988
-//#define E7_DRIVER_TYPE A4988
+  #define E0_DRIVER_TYPE A4988
+  //#define E1_DRIVER_TYPE A4988
+  //#define E2_DRIVER_TYPE A4988
+  //#define E3_DRIVER_TYPE A4988
+  //#define E4_DRIVER_TYPE A4988
+  //#define E5_DRIVER_TYPE A4988
+  //#define E6_DRIVER_TYPE A4988
+  //#define E7_DRIVER_TYPE A4988
+#endif
 
 // Enable this feature if all enabled endstop pins are interrupt-capable.
 // This will remove the need to poll the interrupt pins, saving many CPU cycles.
@@ -926,14 +1327,42 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 500 }
+#if WITH_TMC && WITH_BIQUH2
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 1888 } // 932 if not TMC
+#elif WITH_TMC && WITH_BMG
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 830 }
+#elif WITH_TMC && WITH_TITAN
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 764 }
+#elif WITH_TMC && !WITH_TITAN && !WITH_BMG && !WITH_BIQUH2
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 186 }
+#elif WITH_TITAN && !WITH_TMC
+  #if defined(T2_LEADSCREW)
+    #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 420 }
+  #else
+    #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 420 }
+  #endif
+#else
+  #if defined(T2_LEADSCREW)
+    #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 93 }
+  #else
+    #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
+  #endif
+#endif
+
+// #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 420 }
+//TITAN EXTRUDER:
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 92.6 }
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+#if defined(CUSTOM_SETTINGS)
+  #define DEFAULT_MAX_FEEDRATE          { 300, 150, 5, 25 }
+#else
+  #define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+#endif
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -946,7 +1375,11 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000 }
+#if defined(CUSTOM_SETTINGS)
+  #define DEFAULT_MAX_ACCELERATION      { 1500, 750, 100, 5000 }
+#else
+  #define DEFAULT_MAX_ACCELERATION      { 1500, 1500, 100, 5000 }
+#endif
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -961,9 +1394,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION          1500    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  1500    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION   1500    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
@@ -1000,7 +1433,13 @@
  *   https://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html
  */
 #if DISABLED(CLASSIC_JERK)
-  #define JUNCTION_DEVIATION_MM 0.013 // (mm) Distance from real junction edge
+  #if defined(CUSTOM_SETTINGS)
+    #define JUNCTION_DEVIATION_MM 0.075 // (mm) Distance from real junction edge
+  #elif defined(XY2_MODELS)
+    #define JUNCTION_DEVIATION_MM 0.022 // (mm) Distance from real junction edge
+  #else
+    #define JUNCTION_DEVIATION_MM 0.013 // (mm) Distance from real junction edge
+  #endif
   #define JD_HANDLE_SMALL_SEGMENTS    // Use curvature estimation instead of just the junction angle
                                       // for small segments (< 1mm) with large junction angles (> 135°).
 #endif
@@ -1069,7 +1508,11 @@
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
  *   (e.g., an inductive probe or a nozzle-based probe-switch.)
  */
-//#define FIX_MOUNTED_PROBE
+#ifdef WITHOUT_ABL
+  #define PROBE_MANUALLY
+#else
+  #define FIX_MOUNTED_PROBE
+#endif
 
 /**
  * Use the nozzle as the probe, as with a conductive
@@ -1087,6 +1530,17 @@
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
 //#define BLTOUCH
+
+/**
+ * MagLev V4 probe by MDD
+ *
+ * This probe is deployed and activated by powering a built-in electromagnet.
+ */
+//#define MAGLEV4
+#if ENABLED(MAGLEV4)
+  //#define MAGLEV_TRIGGER_PIN 11     // Set to the connected digital output
+  #define MAGLEV_TRIGGER_DELAY 15     // Changing this risks overheating the coil
+#endif
 
 /**
  * Touch-MI Probe by hotends.fr
@@ -1178,11 +1632,17 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 10, 10, 0 }
+#if defined(CUSTOM_SETTINGS)
+  #define NOZZLE_TO_PROBE_OFFSET { -48, 0, -2 }
+#elif XY2_MODELS
+  #define NOZZLE_TO_PROBE_OFFSET { -50, -10, 0 }
+#else
+  #define NOZZLE_TO_PROBE_OFFSET { -35, -0, 0 }
+#endif
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 10
+#define PROBING_MARGIN 50
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_FEEDRATE (133*60)
@@ -1218,6 +1678,15 @@
   #if ENABLED(PROBE_ACTIVATION_SWITCH)
     //#define PROBE_TARE_ONLY_WHILE_INACTIVE  // Fail to tare/probe if PROBE_ACTIVATION_SWITCH is active
   #endif
+#endif
+
+/**
+ * Probe Enable / Disable
+ * The probe only provides a triggered signal when enabled.
+ */
+//#define PROBE_ENABLE_DISABLE
+#if ENABLED(PROBE_ENABLE_DISABLE)
+  //#define PROBE_ENABLE_PIN -1   // Override the default pin here
 #endif
 
 /**
@@ -1258,7 +1727,9 @@
 #define Z_PROBE_OFFSET_RANGE_MAX 20
 
 // Enable the M48 repeatability test to test probe accuracy
-//#define Z_MIN_PROBE_REPEATABILITY_TEST
+#ifndef WITHOUT_ABL
+  #define Z_MIN_PROBE_REPEATABILITY_TEST
+#endif
 
 // Before deploy/stow pause for user confirmation
 //#define PAUSE_BEFORE_DEPLOY_STOW
@@ -1320,9 +1791,23 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR false
-#define INVERT_Y_DIR true
-#define INVERT_Z_DIR false
+#if defined(XY3_MODELS) || defined(XY2_MODELS) || defined(D01_MODELS) || MOTHERBOARD == BOARD_BTT_SKR_V1_4_TURBO
+  #define INVERT_X_DIR false
+#else
+  #define INVERT_X_DIR true
+#endif
+
+#if defined(XY2_MODELS) || defined(D01_MODELS) || MOTHERBOARD == BOARD_BTT_SKR_V1_4_TURBO
+  #define INVERT_Y_DIR false
+#else
+  #define INVERT_Y_DIR true
+#endif
+
+#if defined(XY3_MODELS) || defined(XY2_MODELS) || MOTHERBOARD == BOARD_BTT_SKR_V1_4_TURBO
+  #define INVERT_Z_DIR true
+#else
+  #define INVERT_Z_DIR false
+#endif
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
 //#define INVERT_K_DIR false
@@ -1330,7 +1815,11 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#if defined(WITH_TITAN) || defined(WITH_BMG) || defined(WITH_BIQUH2) || MOTHERBOARD == BOARD_BTT_SKR_V1_4_TURBO
+  #define INVERT_E0_DIR true
+#else
+  #define INVERT_E0_DIR false
+#endif
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1351,7 +1840,7 @@
  */
 //#define Z_IDLE_HEIGHT Z_HOME_POS
 
-//#define Z_HOMING_HEIGHT  4      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
+#define Z_HOMING_HEIGHT  10      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
                                   // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
 
 //#define Z_AFTER_HOMING  10      // (mm) Height to move to after homing Z
@@ -1368,8 +1857,8 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 200
-#define Y_BED_SIZE 200
+//#define X_BED_SIZE 330
+//#define Y_BED_SIZE 330
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1377,7 +1866,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 200
+//#define Z_MAX_POS 200
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
@@ -1433,14 +1922,14 @@
  * RAMPS-based boards use SERVO3_PIN for the first runout sensor.
  * For other boards you may need to define FIL_RUNOUT_PIN, FIL_RUNOUT2_PIN, etc.
  */
-//#define FILAMENT_RUNOUT_SENSOR
+#define FILAMENT_RUNOUT_SENSOR
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
   #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
 
-  #define FIL_RUNOUT_STATE     LOW        // Pin state indicating that filament is NOT present.
-  #define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.
-  //#define FIL_RUNOUT_PULLDOWN           // Use internal pulldown for filament runout pins.
+  #define FIL_RUNOUT_STATE     HIGH        // Pin state indicating that filament is NOT present.
+  //#define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.
+  #define FIL_RUNOUT_PULLDOWN           // Use internal pulldown for filament runout pins.
   //#define WATCH_ALL_RUNOUT_SENSORS      // Execute runout script on any triggering sensor, not only for the active extruder.
                                           // This is automatically enabled for MIXING_EXTRUDERs.
 
@@ -1480,7 +1969,11 @@
   // Commands to execute on filament runout.
   // With multiple runout sensors use the %c placeholder for the current tool in commands (e.g., "M600 T%c")
   // NOTE: After 'M412 H1' the host handles filament runout and this script does not apply.
-  #define FILAMENT_RUNOUT_SCRIPT "M600"
+  #ifndef TFT_LVGL_UI
+    #define FILAMENT_RUNOUT_SCRIPT "M600"
+  #else
+    #define FILAMENT_RUNOUT_SCRIPT "M25"
+  #endif
 
   // After a runout is detected, continue printing this length of filament
   // before executing the runout script. Useful for a sensor at the end of
@@ -1535,7 +2028,11 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-//#define AUTO_BED_LEVELING_BILINEAR
+#if WITHOUT_ABL
+  #define MESH_BED_LEVELING
+#else
+  #define AUTO_BED_LEVELING_BILINEAR
+#endif
 //#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
@@ -1545,12 +2042,14 @@
  * leveling immediately after G28.
  */
 //#define RESTORE_LEVELING_AFTER_G28
-//#define ENABLE_LEVELING_AFTER_G28
+#define ENABLE_LEVELING_AFTER_G28
 
 /**
  * Auto-leveling needs preheating
  */
-//#define PREHEAT_BEFORE_LEVELING
+#if defined(CUSTOM_SETTINGS)
+  #define PREHEAT_BEFORE_LEVELING
+#endif
 #if ENABLED(PREHEAT_BEFORE_LEVELING)
   #define LEVELING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
   #define LEVELING_BED_TEMP     50
@@ -1602,7 +2101,11 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 3
+  #if defined(CUSTOM_SETTINGS)
+    #define GRID_MAX_POINTS_X 3
+  #else
+    #define GRID_MAX_POINTS_X 3
+  #endif
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
@@ -1612,7 +2115,7 @@
 
     // Beyond the probed grid, continue the implied tilt?
     // Default is to maintain the height of the nearest edge.
-    //#define EXTRAPOLATE_BEYOND_GRID
+    #define EXTRAPOLATE_BEYOND_GRID
 
     //
     // Experimental Subdivision of the grid by Catmull-Rom method.
@@ -1666,8 +2169,9 @@
  * Add a bed leveling sub-menu for ABL or MBL.
  * Include a guided procedure if manual probing is enabled.
  */
-//#define LCD_BED_LEVELING
-
+#ifndef TFT_LVGL_UI
+  #define LCD_BED_LEVELING
+#endif
 #if ENABLED(LCD_BED_LEVELING)
   #define MESH_EDIT_Z_STEP  0.025 // (mm) Step size while manually probing Z axis.
   #define LCD_PROBE_Z_RANGE 4     // (mm) Z Range centered on Z_MIN_POS for LCD Z adjustment
@@ -1675,7 +2179,7 @@
 #endif
 
 // Add a menu item to move between bed corners for manual bed adjustment
-//#define LEVEL_BED_CORNERS
+#define LEVEL_BED_CORNERS
 
 #if ENABLED(LEVEL_BED_CORNERS)
   #define LEVEL_CORNERS_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
@@ -1736,7 +2240,7 @@
  * - Allows Z homing only when XY positions are known and trusted.
  * - If stepper drivers sleep, XY homing may be required again before Z homing.
  */
-//#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing
@@ -1744,7 +2248,12 @@
 #endif
 
 // Homing speeds (mm/min)
-#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
+#if defined(CUSTOM_SETTINGS)
+  // Slow down the X/Y homing
+  #define HOMING_FEEDRATE_MM_M { (35*60), (35*60), (4*60) }
+#else
+  #define HOMING_FEEDRATE_MM_M { (40*60), (40*60), (4*60) }
+#endif
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
@@ -1821,12 +2330,13 @@
  *   M501 - Read settings from EEPROM. (i.e., Throw away unsaved changes)
  *   M502 - Revert settings to "factory" defaults. (Follow with M500 to init the EEPROM.)
  */
-//#define EEPROM_SETTINGS     // Persistent storage with M500 and M501
+#define EEPROM_SETTINGS       // Persistent storage with M500 and M501
 //#define DISABLE_M503        // Saves ~2700 bytes of PROGMEM. Disable for release!
 #define EEPROM_CHITCHAT       // Give feedback on EEPROM commands. Disable to save PROGMEM.
 #define EEPROM_BOOT_SILENT    // Keep M503 quiet and only give errors during first load
 #if ENABLED(EEPROM_SETTINGS)
-  //#define EEPROM_AUTO_INIT  // Init EEPROM automatically on any errors.
+  #define EEPROM_AUTO_INIT  // Init EEPROM automatically on any errors.
+  //#define EEPROM_INIT_NOW   // Init EEPROM on first boot after a new build.
 #endif
 
 //
@@ -1856,13 +2366,13 @@
 //
 #define PREHEAT_1_LABEL       "PLA"
 #define PREHEAT_1_TEMP_HOTEND 180
-#define PREHEAT_1_TEMP_BED     70
+#define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
 #define PREHEAT_2_TEMP_HOTEND 240
-#define PREHEAT_2_TEMP_BED    110
+#define PREHEAT_2_TEMP_BED     90
 #define PREHEAT_2_TEMP_CHAMBER 35
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
@@ -1877,13 +2387,12 @@
  *    P1  Raise the nozzle always to Z-park height.
  *    P2  Raise the nozzle by Z-park amount, limited to Z_MAX_POS.
  */
-//#define NOZZLE_PARK_FEATURE
+#define NOZZLE_PARK_FEATURE
 
 #if ENABLED(NOZZLE_PARK_FEATURE)
   // Specify a park position as { X, Y, Z_raise }
   #define NOZZLE_PARK_POINT { (X_MIN_POS + 10), (Y_MAX_POS - 10), 20 }
-  //#define NOZZLE_PARK_X_ONLY          // X move only is required to park
-  //#define NOZZLE_PARK_Y_ONLY          // Y move only is required to park
+  #define NOZZLE_PARK_MOVE          0   // Park motion: 0 = XY Move, 1 = X Only, 2 = Y Only, 3 = X before Y, 4 = Y before X
   #define NOZZLE_PARK_Z_RAISE_MIN   2   // (mm) Always raise Z by at least this distance
   #define NOZZLE_PARK_XY_FEEDRATE 100   // (mm/s) X and Y axes feedrate (also used for delta Z axis)
   #define NOZZLE_PARK_Z_FEEDRATE    5   // (mm/s) Z axis feedrate (not used for delta printers)
@@ -1926,7 +2435,7 @@
  *   Caveats: The ending Z should be the same as starting Z.
  * Attention: EXPERIMENTAL. G-code arguments may change.
  */
-//#define NOZZLE_CLEAN_FEATURE
+#define NOZZLE_CLEAN_FEATURE
 
 #if ENABLED(NOZZLE_CLEAN_FEATURE)
   // Default number of pattern repetitions
@@ -2003,7 +2512,7 @@
  *
  * View the current statistics with M78.
  */
-//#define PRINTCOUNTER
+#define PRINTCOUNTER
 #if ENABLED(PRINTCOUNTER)
   #define PRINTCOUNTER_SAVE_INTERVAL 60 // (minutes) EEPROM save interval during print
 #endif
@@ -2094,14 +2603,14 @@
  * SD Card support is disabled by default. If your controller has an SD slot,
  * you must uncomment the following option or it won't work.
  */
-//#define SDSUPPORT
+#define SDSUPPORT
 
 /**
  * SD CARD: ENABLE CRC
  *
  * Use CRC checks and retries on the SD communication.
  */
-//#define SD_CHECK_AND_RETRY
+#define SD_CHECK_AND_RETRY
 
 /**
  * LCD Menu Items
@@ -2173,7 +2682,7 @@
 // If you have a speaker that can produce tones, enable it here.
 // By default Marlin assumes you have a buzzer with a fixed frequency.
 //
-//#define SPEAKER
+#define SPEAKER
 
 //
 // The duration and frequency for the UI feedback sound.
@@ -2376,6 +2885,11 @@
 //#define miniVIKI
 
 //
+// Alfawise Ex8 printer LCD marked as WYH L12864 COG
+//
+//#define WYH_L12864
+
+//
 // MakerLab Mini Panel with graphic
 // controller and SD support - https://reprap.org/wiki/Mini_panel
 //
@@ -2443,6 +2957,11 @@
 //#define FYSETC_MINI_12864_2_0    // Type A/B. Discreet RGB Backlight
 //#define FYSETC_MINI_12864_2_1    // Type A/B. NeoPixel RGB Backlight
 //#define FYSETC_GENERIC_12864_1_1 // Larger display with basic ON/OFF backlight.
+
+//
+// BigTreeTech Mini 12864 V1.0 is an alias for FYSETC_MINI_12864_2_1. Type A/B. NeoPixel RGB Backlight.
+//
+//#define BTT_MINI_12864_V1
 
 //
 // Factory display for Creality CR-10
@@ -2636,32 +3155,32 @@
  */
 
 //
-// 480x320, 3.5", SPI Display From MKS
-// Normally used in MKS Robin Nano V2
+// 480x320, 3.5", SPI Display with Rotary Encoder from MKS
+// Usually paired with MKS Robin Nano V2 & V3
 //
 //#define MKS_TS35_V2_0
 
 //
 // 320x240, 2.4", FSMC Display From MKS
-// Normally used in MKS Robin Nano V1.2
+// Usually paired with MKS Robin Nano V1.2
 //
 //#define MKS_ROBIN_TFT24
 
 //
 // 320x240, 2.8", FSMC Display From MKS
-// Normally used in MKS Robin Nano V1.2
+// Usually paired with MKS Robin Nano V1.2
 //
 //#define MKS_ROBIN_TFT28
 
 //
 // 320x240, 3.2", FSMC Display From MKS
-// Normally used in MKS Robin Nano V1.2
+// Usually paired with MKS Robin Nano V1.2
 //
 //#define MKS_ROBIN_TFT32
 
 //
 // 480x320, 3.5", FSMC Display From MKS
-// Normally used in MKS Robin Nano V1.2
+// Usually paired with MKS Robin Nano V1.2
 //
 //#define MKS_ROBIN_TFT35
 
@@ -2672,14 +3191,16 @@
 
 //
 // 320x240, 3.2", FSMC Display From MKS
-// Normally used in MKS Robin
+// Usually paired with MKS Robin
 //
 //#define MKS_ROBIN_TFT_V1_1R
 
 //
 // 480x320, 3.5", FSMC Stock Display from TronxXY
 //
-//#define TFT_TRONXY_X5SA
+#if MOTHERBOARD != BOARD_BTT_SKR_V1_4_TURBO
+  #define TFT_TRONXY_X5SA
+#endif
 
 //
 // 480x320, 3.5", FSMC Stock Display from AnyCubic
@@ -2702,9 +3223,14 @@
 //#define ANET_ET5_TFT35
 
 //
-// 1024x600, 7", RGB Stock Display from BIQU-BX
+// 1024x600, 7", RGB Stock Display with Rotary Encoder from BIQU-BX
 //
 //#define BIQU_BX_TFT70
+
+//
+// 480x320, 3.5", SPI Stock Display with Rotary Encoder from BIQU B1 SE Series
+//
+//#define BTT_TFT35_SPI_V1_0
 
 //
 // Generic TFT with detailed options
@@ -2760,28 +3286,18 @@
 //
 // Ender-3 v2 OEM display. A DWIN display with Rotary Encoder.
 //
-//#define DWIN_CREALITY_LCD
-
-//
-// Ender-3 v2 OEM display, enhanced.
-//
-//#define DWIN_CREALITY_LCD_ENHANCED
-
-//
-// Ender-3 v2 OEM display with enhancements by Jacob Myers
-//
-//#define DWIN_CREALITY_LCD_JYERSUI
-
-//
-// MarlinUI for Creality's DWIN display (and others)
-//
-//#define DWIN_MARLINUI_PORTRAIT
-//#define DWIN_MARLINUI_LANDSCAPE
+//#define DWIN_CREALITY_LCD           // Creality UI
+//#define DWIN_CREALITY_LCD_ENHANCED  // Enhanced UI
+//#define DWIN_CREALITY_LCD_JYERSUI   // Jyers UI by Jacob Myers
+//#define DWIN_MARLINUI_PORTRAIT      // MarlinUI (portrait orientation)
+//#define DWIN_MARLINUI_LANDSCAPE     // MarlinUI (landscape orientation)
 
 //
 // Touch Screen Settings
 //
-//#define TOUCH_SCREEN
+#if ANY(TFT_COLOR_UI, TFT_LVGL_UI, TFT_CLASSIC_UI)
+  #define TOUCH_SCREEN
+#endif
 #if ENABLED(TOUCH_SCREEN)
   #define BUTTON_DELAY_EDIT  50 // (ms) Button repeat delay for edit screens
   #define BUTTON_DELAY_MENU 250 // (ms) Button repeat delay for menus
@@ -2801,8 +3317,26 @@
   #endif
 
   #if ENABLED(TFT_COLOR_UI)
-    //#define SINGLE_TOUCH_NAVIGATION
+    #define SINGLE_TOUCH_NAVIGATION
   #endif
+#endif
+
+// Change colors
+// some colors are predefined, see /src/lcd/dogm/u8g_dev_tft_480~.cpp Line 160
+// or use 16bit color (e.g. 0x0000 = black, 0xFFE0 = yellow)
+// see https://ee-programming-notepad.blogspot.com/2016/10/16-bit-color-generator-picker.html
+#ifdef XY2_MODELS
+  #define TFT_MARLINUI_COLOR 0xFFF9       // COLOR_WHITE  // main foreground color
+  #define TFT_MARLINBG_COLOR COLOR_BLACK  // background color
+  #define TFT_BTCANCEL_COLOR COLOR_RED    // cancel button
+  #define TFT_BTARROWS_COLOR COLOR_BLUE   // COLOR_WHITE  // arrows up/down
+  #define TFT_BTOKMENU_COLOR 0x07E0       // COLOR_GREEN  // enter button
+#else
+  #define TFT_MARLINUI_COLOR COLOR_WHITE  // main foreground color
+  #define TFT_MARLINBG_COLOR COLOR_BLACK  // background color
+  #define TFT_BTCANCEL_COLOR COLOR_RED    // cancel button
+  #define TFT_BTARROWS_COLOR COLOR_WHITE  // arrows up/down
+  #define TFT_BTOKMENU_COLOR COLOR_GREEN  // enter button
 #endif
 
 //
@@ -2811,6 +3345,11 @@
 //
 //#define REPRAPWORLD_KEYPAD
 //#define REPRAPWORLD_KEYPAD_MOVE_STEP 10.0 // (mm) Distance to move per key-press
+
+//
+// EasyThreeD ET-4000+ with button input and status LED
+//
+//#define EASYTHREED_UI
 
 //=============================================================================
 //=============================== Extra Features ==============================
@@ -2822,13 +3361,10 @@
 // :[1,2,3,4,5,6,7,8]
 //#define NUM_M106_FANS 1
 
-// Increase the FAN PWM frequency. Removes the PWM noise but increases heating in the FET/Arduino
-//#define FAST_PWM_FAN
-
 // Use software PWM to drive the fan, as for the heaters. This uses a very low frequency
 // which is not as annoying as with the hardware PWM. On the other hand, if this frequency
 // is too low, you should also increment SOFT_PWM_SCALE.
-//#define FAN_SOFT_PWM
+#define FAN_SOFT_PWM
 
 // Incrementing this by 1 will double the software PWM frequency,
 // affecting heaters, and the fan if FAN_SOFT_PWM is enabled.
